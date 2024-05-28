@@ -1,28 +1,16 @@
-<<<<<<< HEAD
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-=======
 
 def print_longest_name(filename):
     print(max(open(filename).read().splitlines(), key=len))
+    #מדפיסה את השם האורך ביותר בקובץ
+
 def print_total_length(filename):
     print("Total length of all names in the file:")
     total_length = sum(len(name) for name in open(filename).read().splitlines())
     print(total_length)
+    #מדפיסה את אורך כל המילים  בקובץ
 
 
 def print_shortest_names(filename):
@@ -32,6 +20,11 @@ def print_shortest_names(filename):
     shortest_names = "\n".join(name for name in names if len(name) == min_length)
     print(shortest_names)
 
+    #מדפיס  את המילים הקצרות ביותר בקובץ
+
+
+
+
 
 def create_name_length_file(input_filename, output_filename):
     with open(output_filename, 'w') as f:
@@ -39,11 +32,15 @@ def create_name_length_file(input_filename, output_filename):
         f.write(name_lengths)
     print(f"\nName lengths written to {output_filename}")
 
+    #מכניסה לקובץ הנתום את אורך המילים בקובת הקלט
+
 
 def print_names_of_length(filename, length):
     print(f"\nNames of length {length} in the file:")
     names_of_length = "\n".join(name for name in open(filename).read().splitlines() if len(name) == length)
     print(names_of_length)
+
+    #מדפיסה את המילים בוקבץ עם אורך המילה שנקלט
 
 
 def main():
